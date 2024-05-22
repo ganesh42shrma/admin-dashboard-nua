@@ -1,0 +1,137 @@
+
+
+.data-table-container {
+    padding-top: 50px; 
+}
+
+
+.download-btn {
+    text-align: center;
+    margin-left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #9DD0C7;
+    color: black;
+    cursor: pointer;
+}
+
+.download-btn:hover{
+    text-decoration: none;
+    background: #7DA69F;
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #9DD0C7;
+}
+
+th, td {
+    border: 1px solid #121481;
+    padding: 8px;
+}
+
+th {
+    cursor: pointer;
+    background-color: #7da69f;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination .active {
+    font-weight: bold;
+    color: #121481;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #121481;
+    background: #FFB1B1;
+}
+
+.user-text {
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FF407D;
+}
+
+.user-name {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.text-container {
+    text-align: center;
+    color:black;
+    font-weight: 300;
+    width: 100%;
+    font-size: 32px;
+    overflow: hidden;
+    position: relative;
+}
+
+.text-container span{
+    color: #FF407D;
+}
+
+.text-container div {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.text-container div:first-of-type {
+    animation: showup 7s forwards;
+}
+
+.text-container div:last-of-type {
+    width: 100%;
+    animation: reveal 7s forwards;
+}
+
+@keyframes showup {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 1; } 
+}
+
+@keyframes reveal {
+    0% { opacity: 0; width: 0px; }
+    20% { opacity: 1; width: 0px; }
+    30% { width: 100%; }
+    80% { opacity: 1; }
+    100% { opacity: 1; width: 100%; } 
+}
+
+.back-to-books{
+    margin-left: 45%;
+    width:100px;
+}

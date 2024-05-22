@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./components/auth/login/index.jsx";
+import Register from "./components/auth/register/index.jsx";
+
+import Header from "./components/auth/header/index.jsx";
+import Footer from "./components/Footer/footer.js";
+import { AuthProvider } from "./contexts/authContext";
+import { useRoutes } from "react-router-dom";
+import DataTable from "./components/dashboard Home/DataTable.js";
+
 
 function App() {
+  const routesArray = [
+    {
+      path: "*",
+      element: <Login />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+    {
+      path: "/home",
+      element: <DataTable />,
+    },
+  ];
+  let routesElement = useRoutes(routesArray);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <AuthProvider>
+    <Header />
+    <div className="w-full h-screen flex flex-col">
+      {routesElement}
     </div>
+    <Footer /> {/* Include the Footer component here */}
+  </AuthProvider>
   );
 }
 
