@@ -95,5 +95,3 @@ This project is an admin dashboard created as a front-end internship assignment.
 ## License
 
 This project is licensed under the MIT License.
-
-```
