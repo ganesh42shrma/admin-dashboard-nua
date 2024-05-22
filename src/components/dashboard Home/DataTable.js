@@ -4,7 +4,6 @@ import { useAuth } from '../../contexts/authContext';
 import { fetchBooks } from '../../services/api';
 import Pagination from './Pagination';
 import SearchBar from '../searchBar/searchBar';
-import Footer from '../../components/Footer/footer'; 
 import './dataTable.css';
 
 const DataTable = () => {

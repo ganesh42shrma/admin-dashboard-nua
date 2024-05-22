@@ -1,6 +1,5 @@
 import Login from "./components/auth/login/index.jsx";
 import Register from "./components/auth/register/index.jsx";
-
 import Header from "./components/auth/header/index.jsx";
 import Footer from "./components/Footer/footer.js";
 import { AuthProvider } from "./contexts/authContext";
