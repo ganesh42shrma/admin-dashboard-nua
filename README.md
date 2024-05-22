@@ -1,4 +1,3 @@
-Sure, here is the updated `README.md` with the additional information about the sorting functionality:
 
 ```markdown
 # Admin Dashboard
