@@ -1,5 +1,5 @@
 
-```markdown
+
 # Admin Dashboard
 
 This project is an admin dashboard created as a front-end internship assignment. The dashboard lists book data in a tabular format, fetched from the Open Library API. The application includes features like pagination, search by author, CSV download, and authentication.
