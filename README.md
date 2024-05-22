@@ -1,70 +1,97 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Admin Dashboard
 
-In the project directory, you can run:
+This project is an admin dashboard created as a front-end internship assignment. The dashboard lists book data in a tabular format, fetched from the Open Library API. The application includes features like pagination, search by author, CSV download, and authentication.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Data Table**:
+   - Displays book records in a tabular format.
+   - Columns: `ratings_average`, `author name`, `title`, `first_publish_year`, `subject`, `author_birth_date`, `author_top_work`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **API Integration**:
+   - Fetches book records from the [Open Library API](https://openlibrary.org/developers/api) using Axios for API calls.
+   - Includes a search functionality to find books by author name.
 
-### `npm test`
+3. **Pagination**:
+   - Default: 10 books per page.
+   - Options to change to 50 or 100 books per page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Search**:
+   - Search books by author name.
+   - A button to reset the search and fetch all books again.
+   - Note: API calls might be slow to load with the search function. Please have patience after clicking search and wait for the results.
 
-### `npm run build`
+5. **CSV Download**:
+   - Ability to download the current page results in CSV format.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. **Authentication**:
+   - Implemented using Firebase.
+   - Includes login and registration of new accounts.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+7. **UI**:
+   - Simple and minimalistic design with basic color scheme.
+   - Includes a boilerplate footer.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Brownie Points Achievements
 
-### `npm run eject`
+- **Search Books Feature**: Added search functionality by author name.
+- **Download CSV**: Implemented the ability to download the current results in CSV format.
+- **Authentication**: Added authentication for logging into the dashboard.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React.js**: Main framework used for the project.
+- **Axios**: For making API calls.
+- **Firebase**: For authentication.
+- **Open Library API**: Source of book data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ganesh42shrma/admin-dashboard-nua.git
+   ```
 
-## Learn More
+2. Navigate to the project directory:
+   ```bash
+   cd admin-dashboard-nua
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Set up Firebase authentication:
+   - Create a Firebase project and enable authentication.
+   - Add your Firebase configuration to the project.
 
-### Code Splitting
+5. Start the development server:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+1. **Login/Register**: Use the login or register options to access the dashboard.
+2. **View Books**: The default view shows 10 books per page.
+3. **Change Pagination**: Select the desired number of books per page (10, 50, or 100).
+4. **Search by Author**: Use the search bar to find books by author name. Click the reset button to return to the full list.
+5. **Download CSV**: Click the download button to get a CSV of the current page results.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Known Issues
 
-### Making a Progressive Web App
+- The API calls, especially the search function, may be slow to load. Please wait patiently for the results to be returned.
+- Sorting of columns has not been implemented due to time constraints and lack of familiarity with the implementation process.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Future Improvements
 
-### Advanced Configuration
+- Add sorting functionality for all columns.
+- Add editing of row entries (dependent on the availability of a POST API).
+- Improve UI/UX for better user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
