@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.API_BASE_URL;
+const API_URL = process.env.REACT_APP_API_BASE_URL;
 
 export const searchBooksByAuthor = async (authorName, page = 1, limit = 10) => {
   try {
